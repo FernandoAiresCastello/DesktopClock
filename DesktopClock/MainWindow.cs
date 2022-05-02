@@ -31,11 +31,6 @@ namespace DesktopClock
             timer.Start();
         }
 
-        private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            
-        }
-
         private void Timer_Tick(object sender, EventArgs e)
         {
             UpdateDateTime();

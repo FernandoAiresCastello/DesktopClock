@@ -30,23 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             this.MainMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toggleWindowFrameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.togglSecondsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.selectForegroundColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.selectBackgroundColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.MiExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.PnlMain = new System.Windows.Forms.TableLayoutPanel();
-            this.PnlTime = new System.Windows.Forms.Panel();
-            this.PnlDate = new System.Windows.Forms.Panel();
-            this.LbTime = new System.Windows.Forms.Label();
-            this.LbDate = new System.Windows.Forms.Label();
             this.selectBorderColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toggleWindowFrameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.togglSecondsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.MiExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.PnlMain = new System.Windows.Forms.TableLayoutPanel();
+            this.PnlDate = new System.Windows.Forms.Panel();
+            this.LbDate = new System.Windows.Forms.Label();
+            this.PnlTime = new System.Windows.Forms.Panel();
+            this.LbTime = new System.Windows.Forms.Label();
             this.MainMenu.SuspendLayout();
             this.PnlMain.SuspendLayout();
-            this.PnlTime.SuspendLayout();
             this.PnlDate.SuspendLayout();
+            this.PnlTime.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainMenu
@@ -63,6 +63,29 @@
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.Size = new System.Drawing.Size(203, 148);
             // 
+            // toggleWindowFrameToolStripMenuItem
+            // 
+            this.toggleWindowFrameToolStripMenuItem.Checked = true;
+            this.toggleWindowFrameToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.toggleWindowFrameToolStripMenuItem.Name = "toggleWindowFrameToolStripMenuItem";
+            this.toggleWindowFrameToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.toggleWindowFrameToolStripMenuItem.Text = "Show window frame";
+            this.toggleWindowFrameToolStripMenuItem.Click += new System.EventHandler(this.toggleWindowFrameToolStripMenuItem_Click);
+            // 
+            // togglSecondsToolStripMenuItem
+            // 
+            this.togglSecondsToolStripMenuItem.Checked = true;
+            this.togglSecondsToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.togglSecondsToolStripMenuItem.Name = "togglSecondsToolStripMenuItem";
+            this.togglSecondsToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.togglSecondsToolStripMenuItem.Text = "Show seconds";
+            this.togglSecondsToolStripMenuItem.Click += new System.EventHandler(this.togglSecondsToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(199, 6);
+            // 
             // selectForegroundColorToolStripMenuItem
             // 
             this.selectForegroundColorToolStripMenuItem.Name = "selectForegroundColorToolStripMenuItem";
@@ -77,17 +100,24 @@
             this.selectBackgroundColorToolStripMenuItem.Text = "Select background color";
             this.selectBackgroundColorToolStripMenuItem.Click += new System.EventHandler(this.selectBackgroundColorToolStripMenuItem_Click);
             // 
+            // selectBorderColorToolStripMenuItem
+            // 
+            this.selectBorderColorToolStripMenuItem.Name = "selectBorderColorToolStripMenuItem";
+            this.selectBorderColorToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.selectBorderColorToolStripMenuItem.Text = "Select border color";
+            this.selectBorderColorToolStripMenuItem.Click += new System.EventHandler(this.selectBorderColorToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(199, 6);
+            // 
             // MiExit
             // 
             this.MiExit.Name = "MiExit";
             this.MiExit.Size = new System.Drawing.Size(202, 22);
             this.MiExit.Text = "Exit";
             this.MiExit.Click += new System.EventHandler(this.MiExit_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(199, 6);
             // 
             // PnlMain
             // 
@@ -102,93 +132,63 @@
             this.PnlMain.RowCount = 2;
             this.PnlMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.PnlMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.PnlMain.Size = new System.Drawing.Size(662, 255);
+            this.PnlMain.Size = new System.Drawing.Size(1381, 494);
             this.PnlMain.TabIndex = 1;
-            // 
-            // PnlTime
-            // 
-            this.PnlTime.BackColor = System.Drawing.Color.Black;
-            this.PnlTime.Controls.Add(this.LbTime);
-            this.PnlTime.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PnlTime.Location = new System.Drawing.Point(10, 10);
-            this.PnlTime.Margin = new System.Windows.Forms.Padding(10);
-            this.PnlTime.Name = "PnlTime";
-            this.PnlTime.Size = new System.Drawing.Size(642, 158);
-            this.PnlTime.TabIndex = 0;
             // 
             // PnlDate
             // 
             this.PnlDate.BackColor = System.Drawing.Color.Black;
             this.PnlDate.Controls.Add(this.LbDate);
             this.PnlDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PnlDate.Location = new System.Drawing.Point(10, 178);
-            this.PnlDate.Margin = new System.Windows.Forms.Padding(10, 0, 10, 10);
+            this.PnlDate.Location = new System.Drawing.Point(30, 345);
+            this.PnlDate.Margin = new System.Windows.Forms.Padding(30, 0, 30, 30);
             this.PnlDate.Name = "PnlDate";
-            this.PnlDate.Size = new System.Drawing.Size(642, 67);
+            this.PnlDate.Size = new System.Drawing.Size(1321, 119);
             this.PnlDate.TabIndex = 1;
-            // 
-            // LbTime
-            // 
-            this.LbTime.BackColor = System.Drawing.Color.Black;
-            this.LbTime.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LbTime.Font = new System.Drawing.Font("Arial", 80F, System.Drawing.FontStyle.Bold);
-            this.LbTime.ForeColor = System.Drawing.Color.White;
-            this.LbTime.Location = new System.Drawing.Point(0, 0);
-            this.LbTime.Name = "LbTime";
-            this.LbTime.Size = new System.Drawing.Size(642, 158);
-            this.LbTime.TabIndex = 0;
-            this.LbTime.Text = "00:00:00";
-            this.LbTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LbDate
             // 
             this.LbDate.BackColor = System.Drawing.Color.Black;
             this.LbDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LbDate.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold);
+            this.LbDate.Font = new System.Drawing.Font("Arial Rounded MT Bold", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbDate.ForeColor = System.Drawing.Color.White;
             this.LbDate.Location = new System.Drawing.Point(0, 0);
             this.LbDate.Name = "LbDate";
-            this.LbDate.Size = new System.Drawing.Size(642, 67);
+            this.LbDate.Size = new System.Drawing.Size(1321, 119);
             this.LbDate.TabIndex = 1;
-            this.LbDate.Text = "December 15, 2021";
+            this.LbDate.Text = "Segunda-feira, 15 de fevereiro de 2022";
             this.LbDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // selectBorderColorToolStripMenuItem
+            // PnlTime
             // 
-            this.selectBorderColorToolStripMenuItem.Name = "selectBorderColorToolStripMenuItem";
-            this.selectBorderColorToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
-            this.selectBorderColorToolStripMenuItem.Text = "Select border color";
-            this.selectBorderColorToolStripMenuItem.Click += new System.EventHandler(this.selectBorderColorToolStripMenuItem_Click);
+            this.PnlTime.BackColor = System.Drawing.Color.Black;
+            this.PnlTime.Controls.Add(this.LbTime);
+            this.PnlTime.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PnlTime.Location = new System.Drawing.Point(30, 30);
+            this.PnlTime.Margin = new System.Windows.Forms.Padding(30);
+            this.PnlTime.Name = "PnlTime";
+            this.PnlTime.Size = new System.Drawing.Size(1321, 285);
+            this.PnlTime.TabIndex = 0;
             // 
-            // toggleWindowFrameToolStripMenuItem
+            // LbTime
             // 
-            this.toggleWindowFrameToolStripMenuItem.Checked = true;
-            this.toggleWindowFrameToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.toggleWindowFrameToolStripMenuItem.Name = "toggleWindowFrameToolStripMenuItem";
-            this.toggleWindowFrameToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
-            this.toggleWindowFrameToolStripMenuItem.Text = "Show window frame";
-            this.toggleWindowFrameToolStripMenuItem.Click += new System.EventHandler(this.toggleWindowFrameToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(199, 6);
-            // 
-            // togglSecondsToolStripMenuItem
-            // 
-            this.togglSecondsToolStripMenuItem.Checked = true;
-            this.togglSecondsToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.togglSecondsToolStripMenuItem.Name = "togglSecondsToolStripMenuItem";
-            this.togglSecondsToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
-            this.togglSecondsToolStripMenuItem.Text = "Show seconds";
-            this.togglSecondsToolStripMenuItem.Click += new System.EventHandler(this.togglSecondsToolStripMenuItem_Click);
+            this.LbTime.BackColor = System.Drawing.Color.Black;
+            this.LbTime.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LbTime.Font = new System.Drawing.Font("Arial Rounded MT Bold", 147.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbTime.ForeColor = System.Drawing.Color.White;
+            this.LbTime.Location = new System.Drawing.Point(0, 0);
+            this.LbTime.Name = "LbTime";
+            this.LbTime.Size = new System.Drawing.Size(1321, 285);
+            this.LbTime.TabIndex = 0;
+            this.LbTime.Text = "12:34:56";
+            this.LbTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(662, 255);
+            this.BackColor = System.Drawing.Color.Navy;
+            this.ClientSize = new System.Drawing.Size(1381, 494);
             this.ContextMenuStrip = this.MainMenu;
             this.Controls.Add(this.PnlMain);
             this.Name = "MainWindow";
@@ -196,8 +196,8 @@
             this.Text = "Desktop Clock";
             this.MainMenu.ResumeLayout(false);
             this.PnlMain.ResumeLayout(false);
-            this.PnlTime.ResumeLayout(false);
             this.PnlDate.ResumeLayout(false);
+            this.PnlTime.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
