@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,7 +18,7 @@ namespace DesktopClock
         public MainWindow()
         {
             InitializeComponent();
-            FormClosing += MainWindow_FormClosing;
+            MatchDesktopBackgroundColor();
 
             ShowInTaskbar = false;
             LbTime.Text = "";
@@ -29,6 +30,16 @@ namespace DesktopClock
             timer.Interval = 100;
             timer.Tick += Timer_Tick;
             timer.Start();
+        }
+
+        private void MatchDesktopBackgroundColor()
+        {
+            var regkey = Registry.CurrentUser.OpenSubKey(@"Control Panel\Colors", true);
+            var rgb = regkey.GetValue("Background").ToString().Split(' ');
+            int r = int.Parse(rgb[0]);
+            int g = int.Parse(rgb[1]);
+            int b = int.Parse(rgb[2]);
+            BackColor = Color.FromArgb(r, g, b);
         }
 
         private void Timer_Tick(object sender, EventArgs e)
