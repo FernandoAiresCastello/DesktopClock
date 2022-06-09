@@ -132,7 +132,7 @@
             this.PnlMain.RowCount = 2;
             this.PnlMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.PnlMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.PnlMain.Size = new System.Drawing.Size(1103, 459);
+            this.PnlMain.Size = new System.Drawing.Size(737, 277);
             this.PnlMain.TabIndex = 1;
             // 
             // PnlDate
@@ -140,21 +140,22 @@
             this.PnlDate.BackColor = System.Drawing.Color.Transparent;
             this.PnlDate.Controls.Add(this.LbDate);
             this.PnlDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PnlDate.Location = new System.Drawing.Point(30, 321);
-            this.PnlDate.Margin = new System.Windows.Forms.Padding(30, 0, 30, 30);
+            this.PnlDate.Location = new System.Drawing.Point(0, 193);
+            this.PnlDate.Margin = new System.Windows.Forms.Padding(0);
             this.PnlDate.Name = "PnlDate";
-            this.PnlDate.Size = new System.Drawing.Size(1043, 108);
+            this.PnlDate.Size = new System.Drawing.Size(737, 84);
             this.PnlDate.TabIndex = 1;
             // 
             // LbDate
             // 
             this.LbDate.BackColor = System.Drawing.Color.Transparent;
             this.LbDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LbDate.Font = new System.Drawing.Font("Arial Rounded MT Bold", 38F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbDate.Font = new System.Drawing.Font("Arial Narrow", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbDate.ForeColor = System.Drawing.Color.White;
             this.LbDate.Location = new System.Drawing.Point(0, 0);
+            this.LbDate.Margin = new System.Windows.Forms.Padding(0);
             this.LbDate.Name = "LbDate";
-            this.LbDate.Size = new System.Drawing.Size(1043, 108);
+            this.LbDate.Size = new System.Drawing.Size(737, 84);
             this.LbDate.TabIndex = 1;
             this.LbDate.Text = "Segunda-feira, 15 de fevereiro de 2022";
             this.LbDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -164,21 +165,22 @@
             this.PnlTime.BackColor = System.Drawing.Color.Transparent;
             this.PnlTime.Controls.Add(this.LbTime);
             this.PnlTime.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PnlTime.Location = new System.Drawing.Point(30, 30);
-            this.PnlTime.Margin = new System.Windows.Forms.Padding(30);
+            this.PnlTime.Location = new System.Drawing.Point(0, 0);
+            this.PnlTime.Margin = new System.Windows.Forms.Padding(0);
             this.PnlTime.Name = "PnlTime";
-            this.PnlTime.Size = new System.Drawing.Size(1043, 261);
+            this.PnlTime.Size = new System.Drawing.Size(737, 193);
             this.PnlTime.TabIndex = 0;
             // 
             // LbTime
             // 
             this.LbTime.BackColor = System.Drawing.Color.Transparent;
             this.LbTime.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LbTime.Font = new System.Drawing.Font("Arial Rounded MT Bold", 147.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbTime.Font = new System.Drawing.Font("Arial Rounded MT Bold", 100F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbTime.ForeColor = System.Drawing.Color.White;
             this.LbTime.Location = new System.Drawing.Point(0, 0);
+            this.LbTime.Margin = new System.Windows.Forms.Padding(0);
             this.LbTime.Name = "LbTime";
-            this.LbTime.Size = new System.Drawing.Size(1043, 261);
+            this.LbTime.Size = new System.Drawing.Size(737, 193);
             this.LbTime.TabIndex = 0;
             this.LbTime.Text = "12:34:56";
             this.LbTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -188,7 +190,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1103, 459);
+            this.ClientSize = new System.Drawing.Size(737, 277);
             this.ContextMenuStrip = this.MainMenu;
             this.Controls.Add(this.PnlMain);
             this.Name = "MainWindow";
